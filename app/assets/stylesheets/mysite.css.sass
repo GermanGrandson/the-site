@@ -10,17 +10,17 @@ body
     color: #fff
 
   .my-stuff, .about-me, .my-work, .contact
-    height: 700px
     padding-left: 25px
     padding-right: 25px
     padding-top: 50px
-    padding-bottom: 50px
+    padding-bottom: 70px
 
   .my-stuff
     background-image: asset-url("graffiti.jpg")
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+    height: 600px
 
   .about-me
     background-image: asset-url("bubble-green.png")
@@ -32,9 +32,16 @@ body
       font-family: 'montserrat'
       font-size: 60px
       text-align: center
-      padding-bottom: 20px
       letter-spacing: 1px
       font-weight: bold
+
+    .about-me-subtitle
+      font-size: 20px
+      text-align: center
+      color: #aaeded
+      font-family: 'maven pro'
+      padding-bottom: 50px
+      padding-top: 10px
 
     .my-info
 
@@ -247,10 +254,10 @@ body
           background-image: asset-url("votesim.png")
 
   .contact
-    height: 700px
     background-image: asset-url("bubble-blue.png")
     background-position: bottom
     background-size: cover
+    padding-bottom: 0px
 
     .contact-title
       font-family: "montserrat"
@@ -272,7 +279,7 @@ body
       font: 0
 
       .map
-        height: 310px
+        height: 306px
         display: inline-block
         width: 33.3%
         vertical-align: top
@@ -375,24 +382,59 @@ body
               color: #E04444
               transition: 300ms
 
+          .error-message
+            color: #E04444
+            margin-left: 20px
+            margin-top: 20px
+            font-size: 20px
+            font-family: 'maven pro'
+            width: 44%
+            text-align: center
+            display: none
+
     .socials
       font-size: 0
       margin-top: 66px
 
       .github, .twitter, .linkedin
-        font-size: 40px
+        font-size: 60px
         color: #fff
         width: 33.3%
         height: 100px
         display: inline-block
         text-align: center
         cursor: pointer
+        vertical-align: top
 
       .twitter
         background-color: #0084b4
+        transition: 300ms
+
+        &:hover
+          background-color: #00a8e5
+          transition: 300ms
+
+        i
+          margin-top: 20px
 
       .github
         background-color: #24292E
+        transition: 300ms
+
+        &:hover
+          background-color: #3b4249
+          transition: 300ms
+
+        i
+          margin-top: 20px
 
       .linkedin
         background-color: #4875B4
+        transition: 300ms
+
+        &:hover
+          background-color: #568cd8
+          transition: 300ms
+
+        i
+          margin-top: 20px
