@@ -1,0 +1,137 @@
+.site-container
+
+  .my-stuff
+    .my-name If you code it
+    .my-name2 They will come..
+    .about
+    .portfolio
+    .contact-me
+
+  .about-me
+    .icon
+      %i.fa.fa-hand-spock-o
+    .about-me-title About
+    .my-info
+      .handsome
+
+      .about-me-info
+
+        .speech
+          .about-me-text
+            My name is German and I'm a Software Developer from Miami but currently living in the greatest city in the world, New York City! I am a hard worker with a passion for Software Development and Traveling.
+            %br
+            %br
+            I love problem solving, exploring NYC, creating memories with friends, and pushing my body to its limits. Feel free to explore my projects and reach out! I'm always eager to make new friends, and tackle new challenges.
+        .about-me-icons
+          .emoji
+            = image_tag "emoji.png"
+            .icon-title Software Developer
+            .icon-text I love to learn about new technologies, enjoy analyzing code, and building awesome apps that can make a difference
+          .globe
+            = image_tag "globe.png"
+            .icon-title World Traveler
+            .icon-text I've traveled to numerous different countries around the globe and love immersing myself in different cultures
+          .spartan
+            = image_tag "running.png"
+            .icon-title Competitor
+            .icon-text I've participated in numerous Spartan Races throughout the country and am always looking to challenge myself
+
+
+  .my-work
+    .icon
+      %i.fa.fa-desktop
+    .my-projects-title Projects & Skills
+    .my-projects-subtitle A sample of some of my work
+    .skills
+      %i.devicon-ruby-plain
+      %i.devicon-rails-plain
+      %i.devicon-javascript-plain
+      %i.devicon-angularjs-plain
+      %i.devicon-react-original
+      %i.devicon-python-plain
+      %i.devicon-php-plain
+
+    .my-projects
+      .tincat
+        .project-info
+          .project-title TindCat
+        .project-description A Tinder-for-Cats web app made utilizing various APIs
+      .wynworld
+        .project-info
+          .project-title Wynworld
+        .project-description A LinkedIn type application orginally made for Wyncode Academy to track past alumni
+      .question
+        .project-info
+          .project-title ?aire
+        .project-description A Questionnaire app that allows you to create a personal questionnaire
+      .verbal
+        .project-info
+          .project-title Verbal + Visual
+        .project-description A Verbal + Visual mockup
+      .trndi
+        .project-info
+          .project-title Trndi
+        .project-description A web app made to locate the most popular night life locations in current time
+      .azul
+        .project-info
+          .project-title Azul Apron
+        .project-description A Blue Apron mockup
+      .straingth
+        .project-info
+          .project-title STRAINgth
+        .project-description A web app built with RoR utilizing a special API that provides information on medical marijuana
+      .tictac
+        .project-info
+          .project-title Tic-to-Toe
+        .project-description A Tic Tac Toe script with a twist
+      .votersim
+        .project-info
+          .project-title Voter Sim
+        .project-description A Ruby script which allows you to simulate a Presidential election
+
+  .contact
+    .icon
+      %i.fa.fa-microphone
+    .contact-title Contact
+    .contact-subtitle Can I get yo numba
+    .contact-box
+      .map{id:'map'}
+      .form
+        = simple_form_for :message, url: message_path do |f|
+          .left
+            .message.name-input
+              = f.input :name, placeholder: 'Name'
+            .message.email-input
+              = f.input :email, placeholder: 'Email'
+          .right
+            .message.text
+              = f.input :text, as: :text, placeholder: "Write me a message. I promise on Syracuse Basketball that I'll respond!"
+          .submit Send Message
+
+    .socials
+      .twitter
+        %i.fa.fa-twitter
+      .github
+        %i.fa.fa-github
+      .linkedin
+        %i.fa.fa-linkedin
+
+%script(src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCkgRQkTMwdpHYn-VaIAqasuF6hhTEwEEM&callback=initMap')
+
+:javascript
+  %script(src= 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCkgRQkTMwdpHYn-VaIAqasuF6hhTEwEEM&callback=initMap')
+  var map;
+  var myLatLng = {lat: 40.7454474, lng: -73.952307};
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 40.7354474, lng: -73.9711897},
+      zoom: 12,
+      scrollwheel: false
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!'
+    });
+  }
